@@ -1,0 +1,54 @@
+# Visual Studio Files
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build Results
+bin/
+obj/
+[Bb]uild/
+[Ll]ogs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Ww][Ii][Nn]32/
+
+# OS Generated Files
+[Tt]humbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# NPM Packages
+node_modules/
+npm-debug.log*
+yarn-error.log
+yarn-debug.log*
+
+# Dotnet Tools
+dotnet-tools.json
+
+# Dependency directories
+packages/
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk

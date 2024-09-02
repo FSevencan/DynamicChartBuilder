@@ -1,0 +1,74 @@
+﻿<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 id="welcomeMessage">Hoşgeldiniz!</h1>
+    </div>
+
+    <!-- Adım 1: Veritabanı Bağlantı Bilgileri -->
+    <div id="step1" class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h3>Veritabanı Bağlantı Bilgileri</h3>
+        </div>
+        <div class="card-body">
+            <form id="dbConnectionForm">
+                <div class="mb-3">
+                    <label for="server" class="form-label">Sunucu Adresi:</label>
+                    <input type="text" class="form-control" id="server" name="server" placeholder="Örn: 102.241.160.202\MSSQLSERVER2019" required>
+                </div>
+                <div class="mb-3">
+                    <label for="database" class="form-label">Veritabanı Adı:</label>
+                    <input type="text" class="form-control" id="database" name="database" placeholder="Veritabanı adı" required>
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Kullanıcı Adı:</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Kullanıcı adı" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Şifre:</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Şifre" required>
+                </div>
+                <button type="submit" id="connectBtn" class="btn btn-primary w-100">Bağlan</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Adım 2: Veritabanı Objeleri Seçimi -->
+    <div id="step2" class="card shadow-lg mt-5" style="display: none;">
+        <div class="card-header bg-success text-white">
+            <h3>Veritabanı Objeleri</h3>
+        </div>
+        <div class="card-body">
+            <select id="dbObjects" class="form-control mb-3">
+                <option disabled selected>Bir veritabanı objesi seçin</option> <!-- Placeholder -->
+            </select>
+            <button id="continueBtn" class="btn btn-success w-100">Devam</button>
+            <button id="backBtnStep2" class="btn btn-secondary w-100 mt-2">Geri Dön</button> <!-- Geri Dön Butonu -->
+        </div>
+    </div>
+
+    <!-- Adım 3: Grafik Türü Seçimi -->
+    <div id="step3" class="card shadow-lg mt-5" style="display: none;">
+        <div class="card-header bg-info text-white">
+            <h3>Grafik Türü Seçin</h3>
+        </div>
+        <div class="card-body">
+            <select id="chartType" class="form-control mb-3" multiple>
+                <option value="line">Line Chart</option>
+                <option value="bar">Bar Chart</option>
+                <option value="radar">Radar Chart</option>
+            </select>
+            <button id="generateChartBtn" class="btn btn-primary w-100">Grafik Oluştur</button>
+            <button id="backBtnStep3" class="btn btn-secondary w-100 mt-2">Geri Dön</button> <!-- Geri Dön Butonu -->
+        </div>
+    </div>
+
+    <!-- Adım 4: Grafik Gösterimi -->
+    <div id="chartContainer" class="mt-5" style="display: none;">
+        <button id="homeBtnTop" class="btn btn-warning d-flex align-items-center" style="display: none;">
+            <span class="me-2">&#8592;</span>
+            Anasayfaya Dön
+        </button>
+        <h3 class="text-center">Grafikler</h3>
+        <div id="charts" class="chart-container"></div> <!-- Grafiklerin ekleneceği alan -->
+    </div>
+</div>
+
